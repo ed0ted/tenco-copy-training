@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+body {
+    background-image: url("http://127.0.0.1:5500/earth_night.jpg");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+.h-img-wrap100 {
+    width: 100%;
+    background-color: white;
+}
+.header-img {
+    background-color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+    padding-top: 20px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    list-style: none;
+}
+
+ul > li {
+    display: inline-block;
+    text-align: center;
+}
+.nav-wrapper {
+    width: 100%;
+    background-color: white;
+}
+.nav {
+    padding-top: 20px;
+    width: 60%;
+    text-align: center;
+    background-color: white;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+li span {
+    cursor: pointer;
+    font-size: 1.5vw;
+    font-family: monospace;
+    padding: 15px;
+    &::before {
+        content: "";
+        display: block;
+        background-color: white;
+        top: 0;
+        left: 0;
+        position: relative;
+        transform: translateY(-10px);
+        left: 0%;
+
+        height: 3px;
+        width: 100%;
+        transition: all 0.3s;
+    }
+    &:hover::before {
+        width: 100%;
+        background-color: chocolate;
+        transform: translateY(0px);
+        transition: all 0.3s;
+    }
+    &::after {
+        content: "";
+        display: block;
+        background-color: white;
+        top: 0;
+        left: 0;
+        position: relative;
+        transform: translateY(10px);
+        left: 0%;
+
+        height: 3px;
+        width: 100%;
+        transition: all 0.3s;
+    }
+    &:hover::after {
+        width: 100%;
+        background-color: chocolate;
+        transform: translateY(0px);
+        transition: all 0.3s;
+    }
+}
+
+.wrapper1 {
+    width: 100%;
+    text-align: center;
+    margin-top: -40px;
+}
+.header_center {
+    display: inline-block;
+    margin: 0 auto;
+
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.parallax {
+    width: 100%;
+    height: 50%px;
+    // filter: brightness(50%);
+    background-image: url("earth_night.jpg");
+
+    min-height: 50vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text-on-img {
+    position: relative;
+
+    transform: translate(0, 200%);
+    color: white;
+    font-size: 5vh;
+    margin: 50px;
+}
+
+.text1 {
+    margin-top: 100px;
+    width: 100%;
+    height: 1000px;
+    background-color: white;
+}
+.line1 {
+    border-right: 1px solid darkgray;
+    height: 100px;
+    width: 50%;
+    position: relative;
+    top: 10px;
+}
+.text1 h1 {
+    margin: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    font-size: 5vh;
+    color: black;
+}
+
+.underheader-text {
+    text-justify: inter-word;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    font-size: 2vh;
+}
+.line2 {
+    border-right: 1px solid darkgray;
+    height: 100px;
+    width: 50%;
+    position: relative;
+    top: 10px;
+}
+.three-elements-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+}
+
+/**********************************/
+.top-card {
+    background-color: white;
+    width: 350px;
+    height: 500px;
+    overflow: hidden;
+
+    &:hover .top-card-front {
+        top: 100%;
+    }
+
+    .top-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+
+        .top-card-front {
+            z-index: 10;
+            background: url(https://i.pinimg.com/736x/f0/98/f8/f098f8b8bad3ac05c5ca231efb3a734d.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 350px;
+            height: 500px;
+        }
+    }
+}
+.top-card-front,
+.top-card-back {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease-in-out;
+}
+.content {
+    padding-top: 50%;
+}
+
+.top-card-front h1 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    color: black;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 350px;
+    height: 500px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+}
+
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    .img {
+        background: url(https://i.pinimg.com/736x/44/a4/6d/44a46d53e69bc356b874cad1006dabf4.jpg);
+    width: 350px;
+    height: 500px;
+    }
+}
+
+
+.flip-card-front {
+    background-color: white;
+    color: black;
+    h1{
+        position: absolute;
+        margin-left: 30%;
+        margin-top: 75%;
+        background-color: white;
+        color: black;
+    }
+}
+
+
+.flip-card-back {
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg);
+}
+
+
+/***********************************/
+
+
+.left-card {
+    background-color: white;
+    width: 350px;
+    height: 500px;
+    overflow: hidden;
+
+    &:hover .left-card-front {
+        left: 100%;
+    }
+
+    .left-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+
+        .left-card-front {
+            z-index: 10;
+            background: url("https://img.pixers.pics/pho_wat(s3:700/FO/64/66/75/25/700_FO64667525_f961d2d815471b5e2566e5e823fea5f7.jpg,700,665,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,615,jpg)/stickers-glasses-of-champagne-with-splash-on-black-background.jpg.jpg");
+            background-size: cover;
+            background-position: center;
+            width: 350px;
+            height: 500px;
+            h1{
+                display: flex;
+                justify-content: center;
+                margin-top: 75%;
+                color: white;
+            }
+        }
+    }
+}
+.left-card-front,
+.left-card-back {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease-in-out;
+}
+
+//https://i.pinimg.com/736x/44/a4/6d/44a46d53e69bc356b874cad1006dabf4.jpg
+// display: flex;
+// justify-content: space-around;
